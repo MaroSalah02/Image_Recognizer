@@ -132,7 +132,7 @@ def create_model_predict(arch, input_size,output_size,learning_rate):
 
 # A function for loading A saved trained network.
 def load_any_model(filepath, arch):
-    if arch == "coda":
+    if arch == "cuda":
         check_point = torch.load(filepath)
     else:
         check_point = torch.load(filepath,map_location="cpu")
